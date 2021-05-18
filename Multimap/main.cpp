@@ -27,5 +27,14 @@ int main()
 
 	}
 
+	std::cout << std::endl;
+
+	auto its2 = lookup.equal_range(20);
+
+	for (auto it = its2.first; it != its2.second; ++it)
+	{
+		std::cout << it->first << ": " << it->second << std::endl;
+	}
+
 	return 0;
 }
